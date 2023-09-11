@@ -4,16 +4,6 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
-      "type": "Resource",
-      "source_relative_path": "../package-icon.png",
-      "output": {
-        "resource": {
-          "relative_path": "package-icon.png"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "advanced/extensiblity.md",
       "output": {
@@ -1075,6 +1065,16 @@
       "output": {
         ".html": {
           "relative_path": "getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "icon.png"
         }
       },
       "version": ""
