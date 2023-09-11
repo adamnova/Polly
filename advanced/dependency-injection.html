@@ -6,16 +6,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Dependency injection ">
       
-      <link rel="icon" href="icon.png">
-      <link rel="stylesheet" href="public/docfx.min.css">
-      <link rel="stylesheet" href="public/main.css">
-      <meta name="docfx:navrel" content="toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
+      <link rel="icon" href="../icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
       
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/adamnova/Polly/blob/main/docs/dependency-injection.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/adamnova/Polly/blob/main/docs/advanced/dependency-injection.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,8 +30,8 @@
   </head>
 
   <script type="module">
-    import options from './public/main.js'
-    import { init } from './public/docfx.min.js'
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
     init(options)
   </script>
 
@@ -45,8 +45,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="index.html">
-            <img id="logo" class="svg" src="icon.png" alt="">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../icon.png" alt="">
             
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,7 +85,7 @@
         <article data-uid="">
 <h1 id="dependency-injection">Dependency injection</h1>
 
-<p>Starting with version 8, Polly provides features that make the integration of Polly with the .NET <a href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection"><code>IServiceCollection</code></a> Dependency Injection (DI) container more streamlined. This is a thin layer atop the <a href="pipelines/resilience-pipeline-registry.html">resilience pipeline registry</a> which manages resilience pipelines.</p>
+<p>Starting with version 8, Polly provides features that make the integration of Polly with the .NET <a href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection"><code>IServiceCollection</code></a> Dependency Injection (DI) container more streamlined. This is a thin layer atop the <a href="pipelines/resilience-pipeline-registry.md">resilience pipeline registry</a> which manages resilience pipelines.</p>
 <h2 id="usage">Usage</h2>
 <p>To use the DI functionality, add the <code>Polly.Extensions</code> package to your project:</p>
 <pre><code class="lang-sh">dotnet add package Polly.Extensions
@@ -271,7 +271,7 @@ ResiliencePipeline instanceB = pipelineProvider.GetPipeline(new MyPipelineKey(&q
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/adamnova/Polly/blob/main/docs/dependency-injection.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/adamnova/Polly/blob/main/docs/advanced/dependency-injection.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

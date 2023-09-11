@@ -4,11 +4,25 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "log_codes": [
+        "InvalidFileLink",
+        "invalid-note-section"
+      ],
       "type": "Conceptual",
-      "source_relative_path": "advanced/extensiblity.md",
+      "source_relative_path": "advanced/dependency-injection.md",
       "output": {
         ".html": {
-          "relative_path": "advanced/extensiblity.html"
+          "relative_path": "advanced/dependency-injection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "advanced/extensibility.md",
+      "output": {
+        ".html": {
+          "relative_path": "advanced/extensibility.html"
         }
       },
       "version": ""
@@ -29,6 +43,19 @@
       "output": {
         ".html": {
           "relative_path": "advanced/simmy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "advanced/telemetry.md",
+      "output": {
+        ".html": {
+          "relative_path": "advanced/telemetry.html"
         }
       },
       "version": ""
@@ -1037,19 +1064,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "invalid-note-section"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "dependency-injection.md",
-      "output": {
-        ".html": {
-          "relative_path": "dependency-injection.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "general.md",
       "output": {
@@ -1204,22 +1218,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "telemetry.md",
-      "output": {
-        ".html": {
-          "relative_path": "telemetry.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
