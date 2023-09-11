@@ -5,8 +5,8 @@
   "files": [
     {
       "log_codes": [
-        "InvalidFileLink",
-        "invalid-note-section"
+        "invalid-note-section",
+        "InvalidFileLink"
       ],
       "type": "Conceptual",
       "source_relative_path": "advanced/dependency-injection.md",
@@ -1089,6 +1089,16 @@
       "output": {
         "resource": {
           "relative_path": "icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Redirection",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
         }
       },
       "version": ""
