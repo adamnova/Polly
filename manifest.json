@@ -14,19 +14,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "advanced/extensiblity.md",
       "output": {
@@ -1097,21 +1084,11 @@
       "version": ""
     },
     {
-      "type": "Redirection",
-      "source_relative_path": "index.md",
-      "output": {
-        ".html": {
-          "relative_path": "index.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
-      "source_relative_path": "pipelines/README.md",
+      "source_relative_path": "pipelines/readme.md",
       "output": {
         ".html": {
-          "relative_path": "pipelines/README.html"
+          "relative_path": "pipelines/readme.html"
         }
       },
       "version": ""
@@ -1130,11 +1107,14 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
-      "source_relative_path": "strategies/README.md",
+      "source_relative_path": "readme.md",
       "output": {
         ".html": {
-          "relative_path": "strategies/README.html"
+          "relative_path": "readme.html"
         }
       },
       "version": ""
@@ -1192,6 +1172,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "strategies/readme.md",
+      "output": {
+        ".html": {
+          "relative_path": "strategies/readme.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -1226,16 +1216,6 @@
       "output": {
         ".html": {
           "relative_path": "telemetry.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "theme/custom-styles/public/main.css",
-      "output": {
-        "resource": {
-          "relative_path": "theme/custom-styles/public/main.css"
         }
       },
       "version": ""
