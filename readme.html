@@ -88,64 +88,6 @@
 <p>Polly is a .NET resilience and transient-fault-handling library that allows developers to express resilience strategies such as Retry, Circuit Breaker, Hedging, Timeout, Rate Limiter and Fallback in a fluent and thread-safe manner.</p>
 <p>We are a member of the <a href="https://www.dotnetfoundation.org/about">.NET Foundation</a>!</p>
 <p><img src="https://raw.github.com/App-vNext/Polly/main/Polly-Logo.png" alt="Polly logo"></p>
-<h2 id="quick-start">Quick start</h2>
-<p>To use Polly, you must provide a callback and execute it using <a href="resilience-pipelines.md"><strong>resilience pipeline</strong></a>. A resilience pipeline is a combination of one or more <a href="resilience-strategies.md"><strong>resilience strategies</strong></a> such as retry, timeout, and rate limiter. Polly uses <strong>builders</strong> to integrate these strategies into a pipeline.</p>
-<p>To get started, first add the <a href="https://www.nuget.org/packages/Polly.Core/">Polly.Core</a> package to your project by running the following command:</p>
-<pre><code class="lang-sh">dotnet add package Polly.Core
-</code></pre>
-<p>You can create a <code>ResiliencePipeline</code> using the <code>ResiliencePipelineBuilder</code> class as shown below:</p>
-<!-- snippet: quick-start -->
-<pre><code class="lang-cs">// Create a instance of builder that exposes various extensions for adding resilience strategies
-var builder = new ResiliencePipelineBuilder();
-
-// Add retry using the default options
-builder.AddRetry(new RetryStrategyOptions());
-
-// Add 10 second timeout
-builder.AddTimeout(TimeSpan.FromSeconds(10));
-
-// Build the resilience pipeline
-ResiliencePipeline pipeline = builder.Build();
-
-// Execute the pipeline
-await pipeline.ExecuteAsync(async token =&gt;
-{
-    // Your custom logic here
-});
-</code></pre>
-<!-- endSnippet -->
-<h3 id="dependency-injection">Dependency injection</h3>
-<p>If you prefer to define resilience pipelines using <a href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection"><code>IServiceCollection</code></a>, you'll need to install the <a href="https://www.nuget.org/packages/Polly.Extensions/">Polly.Extensions</a> package:</p>
-<pre><code class="lang-sh">dotnet add package Polly.Extensions
-</code></pre>
-<p>You can then define your resilience pipeline using the <code>AddResiliencePipeline(...)</code> extension method as shown:</p>
-<!-- snippet: quick-start-di -->
-<pre><code class="lang-cs">var services = new ServiceCollection();
-
-// Define a resilience pipeline with the name &quot;my-pipeline&quot;
-services.AddResiliencePipeline(&quot;my-pipeline&quot;, builder =&gt;
-{
-    builder
-        .AddRetry(new RetryStrategyOptions())
-        .AddTimeout(TimeSpan.FromSeconds(10));
-});
-
-// Build the service provider
-IServiceProvider serviceProvider = services.BuildServiceProvider();
-
-// Retrieve ResiliencePipelineProvider that caches and dynamically creates the resilience pipelines
-var pipelineProvider = serviceProvider.GetRequiredService&lt;ResiliencePipelineProvider&lt;string&gt;&gt;();
-
-// Retrieve resilience pipeline using the name it was registered with
-ResiliencePipeline pipeline = pipelineProvider.GetPipeline(&quot;my-pipeline&quot;);
-
-// Execute the pipeline
-await pipeline.ExecuteAsync(async token =&gt;
-{
-    // Your custom logic here
-});
-</code></pre>
-<!-- endSnippet -->
 <h2 id="resilience-strategies">Resilience strategies</h2>
 <table>
 <thead>
