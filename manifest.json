@@ -1047,22 +1047,9 @@
       "version": ""
     },
     {
-      "type": "Toc",
-      "source_relative_path": "community/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "community/toc.html"
-        },
-        ".json": {
-          "relative_path": "community/toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
       "log_codes": [
-        "invalid-note-section",
-        "InvalidFileLink"
+        "InvalidFileLink",
+        "invalid-note-section"
       ],
       "type": "Conceptual",
       "source_relative_path": "dependency-injection.md",
@@ -1079,6 +1066,19 @@
       "output": {
         ".html": {
           "relative_path": "general.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting-started.html"
         }
       },
       "version": ""
@@ -1203,19 +1203,6 @@
       "output": {
         ".html": {
           "relative_path": "strategies/timeout.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "strategies/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "strategies/toc.html"
-        },
-        ".json": {
-          "relative_path": "strategies/toc.json"
         }
       },
       "version": ""
