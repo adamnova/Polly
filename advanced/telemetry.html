@@ -311,7 +311,7 @@ Resilience pipeline executed. Source: '{PipelineName}/{PipelineInstance}', Opera
 Execution attempt. Source: '{PipelineName}/{PipelineInstance}/{StrategyName}', Operation Key: '{OperationKey}', Result: '{Result}', Handled: '{Handled}', Attempt: '{Attempt}', Execution Time: '{ExecutionTimeMs}'
 </code></pre>
 <h2 id="emitting-telemetry-events">Emitting telemetry events</h2>
-<p>Each resilience strategy can generate telemetry data through the <a href="../src/Polly.Core/Telemetry/ResilienceStrategyTelemetry.cs"><code>ResilienceStrategyTelemetry</code></a> API. Polly encapsulates event details as <a href="../src/Polly.Core/Telemetry/TelemetryEventArguments.cs"><code>TelemetryEventArguments</code></a> and emits them via <code>TelemetryListener</code>.</p>
+<p>Each resilience strategy can generate telemetry data through the <a href="api/Polly.Core.Telemetry.ResilienceStrategyTelemetry.html"><code>ResilienceStrategyTelemetry</code></a> API. Polly encapsulates event details as <a href="../src/Polly.Core/Telemetry/TelemetryEventArguments.cs"><code>TelemetryEventArguments</code></a> and emits them via <code>TelemetryListener</code>.</p>
 <p>To leverage this telemetry data, users should assign a <code>TelemetryListener</code> instance to <code>ResiliencePipelineBuilder.TelemetryListener</code> and then consume the <code>TelemetryEventArguments</code>.</p>
 <p>For common scenarios, it is expected that users would make use of <code>Polly.Extensions</code>. This extension enables telemetry configuration through the <code>ResiliencePipelineBuilder.ConfigureTelemetry(...)</code> method, which processes <code>TelemetryEventArguments</code> to generate logs and metrics.</p>
 </article>
