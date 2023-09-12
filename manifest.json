@@ -4,19 +4,6 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "advanced/dependency-injection.md",
       "output": {
@@ -1103,7 +1090,7 @@
       "version": ""
     },
     {
-      "type": "Redirection",
+      "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
@@ -1114,10 +1101,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "pipelines/README.md",
+      "source_relative_path": "pipelines/index.md",
       "output": {
         ".html": {
-          "relative_path": "pipelines/README.html"
+          "relative_path": "pipelines/index.html"
         }
       },
       "version": ""
@@ -1128,16 +1115,6 @@
       "output": {
         ".html": {
           "relative_path": "pipelines/resilience-pipeline-registry.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "strategies/README.md",
-      "output": {
-        ".html": {
-          "relative_path": "strategies/README.html"
         }
       },
       "version": ""
@@ -1182,6 +1159,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "strategies/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "strategies/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -1221,6 +1208,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
