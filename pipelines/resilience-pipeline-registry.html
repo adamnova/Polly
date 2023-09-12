@@ -201,7 +201,7 @@ ResiliencePipeline&lt;HttpResponseMessage&gt; genericPipeline = registry.GetOrAd
 </table>
 <blockquote>
 <p>[&gt;NOTE]
-The <code>BuilderName</code> and <code>InstanceName</code> are used in <a href="telemetry.md#metrics">telemetry</a>.</p>
+The <code>BuilderName</code> and <code>InstanceName</code> are used in [telemetry.</p>
 </blockquote>
 <p>Usage example:</p>
 <!-- snippet: registry-options -->
@@ -221,7 +221,7 @@ The <code>BuilderName</code> and <code>InstanceName</code> are used in <a href="
 var registry = new ResiliencePipelineRegistry&lt;string&gt;();
 </code></pre>
 <!-- endSnippet -->
-<p>Even though the example might seem unnecessary, given that the defaults for a registry using the <code>string</code> type are suitable, it showcases the various properties of the registry and how to set them up. This is particularly helpful when you use <a href="#complex-registry-keys">complex registry keys</a>.</p>
+<p>Even though the example might seem unnecessary, given that the defaults for a registry using the <code>string</code> type are suitable, it showcases the various properties of the registry and how to set them up. This is particularly helpful when you use [complex registry keys.</p>
 <h2 id="dynamic-reloads">Dynamic reloads</h2>
 <p>Dynamic reloading lets you refresh cached pipelines when the reload token, represented as a <code>CancellationToken</code>, is triggered. To enable dynamic reloads:</p>
 <!-- snippet: registry-reloads -->
@@ -288,9 +288,9 @@ registry.TryAddBuilder(&quot;A&quot;, (builder, context) =&gt;
 });
 </code></pre>
 <!-- endSnippet -->
-<p>Both <code>AddReloadToken(...)</code> and <code>OnPipelineDisposed(...)</code> are used to implement the <code>EnableReloads&lt;TOptions&gt;(...)</code> extension method that is used by the <a href="dependency-injection.md#dynamic-reloads">Dependency Injection layer</a>.</p>
+<p>Both <code>AddReloadToken(...)</code> and <code>OnPipelineDisposed(...)</code> are used to implement the <code>EnableReloads&lt;TOptions&gt;(...)</code> extension method that is used by the [Dependency Injection layer.</p>
 <h2 id="complex-registry-keys">Complex registry keys</h2>
-<p>Though the pipeline registry supports complex keys, we suggest you use them when defining pipelines with the <a href="dependency-injection.md">Dependency Injection</a> (DI) containers. For further information, see the <a href="dependency-injection.md#complex-pipeline-keys">section on complex pipeline keys</a>.</p>
+<p>Though the pipeline registry supports complex keys, we suggest you use them when defining pipelines with the [Dependency Injection (DI) containers. For further information, see the [section on complex pipeline keys.</p>
 </article>
 
         <div class="contribution d-print-none">

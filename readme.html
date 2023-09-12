@@ -86,8 +86,8 @@
 <h1 id="polly-documentation">Polly Documentation</h1>
 
 <p>Polly is a .NET resilience and transient-fault-handling library that allows developers to express resilience strategies such as Retry, Circuit Breaker, Hedging, Timeout, Rate Limiter and Fallback in a fluent and thread-safe manner.</p>
-<p>We are a member of the <a href="https://www.dotnetfoundation.org/about">.NET Foundation</a>!</p>
-<p><img src="https://raw.github.com/App-vNext/Polly/main/Polly-Logo.png" alt="Polly logo"></p>
+<p>We are a member of the [.NET Foundation!</p>
+<p>![Polly logo</p>
 <h2 id="resilience-strategies">Resilience strategies</h2>
 <table>
 <thead>
@@ -101,42 +101,42 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="strategies/retry.html">Retry</a></td>
+<td>[Retry</td>
 <td>Yes</td>
 <td>Many faults are transient and may self-correct after a short delay.</td>
 <td style="text-align: center;"><em>Maybe it's just a blip</em></td>
 <td>Allows configuring automatic retries.</td>
 </tr>
 <tr>
-<td><a href="strategies/circuit-breaker.html">Circuit-breaker</a></td>
+<td>[Circuit-breaker</td>
 <td>Yes</td>
 <td>When a system is seriously struggling, failing fast is better than making users/callers wait.  <br><br>Protecting a faulting system from overload can help it recover.</td>
 <td style="text-align: center;"><em>Stop doing it if it hurts</em> <br><br><em>Give that system a break</em></td>
 <td>Breaks the circuit (blocks executions) for a period, when faults exceed some pre-configured threshold.</td>
 </tr>
 <tr>
-<td><a href="strategies/timeout.html">Timeout</a></td>
+<td>[Timeout</td>
 <td>No</td>
 <td>Beyond a certain wait, a success result is unlikely.</td>
 <td style="text-align: center;"><em>Don't wait forever</em></td>
 <td>Guarantees the caller won't have to wait beyond the timeout.</td>
 </tr>
 <tr>
-<td><a href="strategies/rate-limiter.html">Rate Limiter</a></td>
+<td>[Rate Limiter</td>
 <td>No</td>
 <td>Limiting the rate a system handles requests is another way to control load. <br><br> This can apply to the way your system accepts incoming calls, and/or to the way you call downstream services.</td>
 <td style="text-align: center;"><em>Slow down a bit, will you?</em></td>
 <td>Constrains executions to not exceed a certain rate.</td>
 </tr>
 <tr>
-<td><a href="strategies/fallback.html">Fallback</a></td>
+<td>[Fallback</td>
 <td>Yes</td>
 <td>Things will still fail - plan what you will do when that happens.</td>
 <td style="text-align: center;"><em>Degrade gracefully</em></td>
 <td>Defines an alternative value to be returned (or action to be executed) on failure.</td>
 </tr>
 <tr>
-<td><a href="strategies/hedging.html">Hedging</a></td>
+<td>[Hedging</td>
 <td>Yes</td>
 <td>Things can be slow sometimes, plan what you will do when that happens.</td>
 <td style="text-align: center;"><em>Hedge your bets</em></td>
@@ -144,51 +144,51 @@
 </tr>
 </tbody>
 </table>
-<p>Visit the <a href="resilience-strategies.md">resilience strategies</a> section to understand their structure and explore various configuration methods.</p>
+<p>Visit the [resilience strategies section to understand their structure and explore various configuration methods.</p>
 <h2 id="articles">Articles</h2>
 <ul>
-<li><a href="readme.html">Introduction</a>: General information about the project and its goals.</li>
-<li><a href="getting-started.html">Getting started</a>: A guide to help you get started with the project.</li>
+<li>[Introduction: General information about the project and its goals.</li>
+<li>[Getting started: A guide to help you get started with the project.</li>
 <li>Resilience strategies: A collection of strategies for improving the resilience of your system.
 <ul>
-<li><a href="strategies/timeout.html">Timeout</a>: A strategy for setting a maximum time limit for a request.</li>
-<li><a href="strategies/retry.html">Retry</a>: A strategy for retrying failed requests.</li>
-<li><a href="strategies/rate-limiter.html">Rate limiter</a>: A strategy for limiting the rate of requests.</li>
-<li><a href="strategies/hedging.html">Hedging</a>: A strategy for hedging against long request times.</li>
-<li><a href="strategies/fallback.html">Fallback</a>: A strategy for providing a fallback response in case of failure.</li>
-<li><a href="strategies/circuit-breaker.html">Circuit breaker</a>: A strategy for breaking the circuit when a system is down.</li>
+<li>[Timeout: A strategy for setting a maximum time limit for a request.</li>
+<li>[Retry: A strategy for retrying failed requests.</li>
+<li>[Rate limiter: A strategy for limiting the rate of requests.</li>
+<li>[Hedging: A strategy for hedging against long request times.</li>
+<li>[Fallback: A strategy for providing a fallback response in case of failure.</li>
+<li>[Circuit breaker: A strategy for breaking the circuit when a system is down.</li>
 </ul>
 </li>
 <li>Resilience pipelines: Understanding the use of resilience pipelines.
 <ul>
-<li><a href="pipelines/resilience-pipeline-registry.html">Resilience pipeline registry</a>: Exploring the registry that stores resilience pipelines.</li>
+<li>[Resilience pipeline registry: Exploring the registry that stores resilience pipelines.</li>
 </ul>
 </li>
 <li>vanced topics: A collection of advanced topics for further learning.
 <ul>
-<li><a href="advanced/telemetry.html">Telemetry and monitoring</a>: Insights into telemetry generated by resilience pipelines and strategies.</li>
-<li><a href="advanced/simmy.html">Chaos engineering</a>: Get to know chaos engineering via the project's capabilities.</li>
-<li><a href="advanced/dependency-injection.html">Dependency injection</a>: How the project integrates with Dependency Injection.</li>
+<li>[Telemetry and monitoring: Insights into telemetry generated by resilience pipelines and strategies.</li>
+<li>[Chaos engineering: Get to know chaos engineering via the project's capabilities.</li>
+<li>[Dependency injection: How the project integrates with Dependency Injection.</li>
 </ul>
 </li>
 <li>Community and resources: A collection of resources and community contributions.
 <ul>
-<li><a href="community/polly-contrib.html">Polly-Contrib projects and libraries</a>: Learn how to contribute to and extend the project ecosystem.</li>
-<li><a href="community/libraries-and-contributions.html">Libraries and contributions</a>: Find out which libraries the project depends on and who contributes to its development.</li>
-<li><a href="community/resources.html">Useful resources and links</a>: Browse through blogs, podcasts, courses, e-books, and other community resources.</li>
+<li>[Polly-Contrib projects and libraries: Learn how to contribute to and extend the project ecosystem.</li>
+<li>[Libraries and contributions: Find out which libraries the project depends on and who contributes to its development.</li>
+<li>[Useful resources and links: Browse through blogs, podcasts, courses, e-books, and other community resources.</li>
 </ul>
 </li>
-<li><a href="api/">API</a>: The API documentation for the project.</li>
+<li>[API: The API documentation for the project.</li>
 </ul>
 <h2 id="articles-previous-polly-versions">Articles (previous Polly versions)</h2>
 <ul>
-<li><a href="v7/extensibility.html">Extensibility (v7)</a>: Learn how you can extend Polly with new policies.</li>
+<li>[Extensibility (v7): Learn how you can extend Polly with new policies.</li>
 </ul>
 <h2 id="samples">Samples</h2>
 <ul>
-<li><a href="samples/README.md">Samples</a>: Samples in this repository that serve as an introduction to Polly.</li>
-<li><a href="https://github.com/App-vNext/Polly-Samples">Polly-Samples</a>: Contains practical examples for using various implementations of Polly. Please feel free to contribute to the Polly-Samples repository in order to assist others who are either learning Polly for the first time, or are seeking advanced examples and novel approaches provided by our generous community.</li>
-<li>Microsoft's <a href="https://github.com/dotnet-architecture/eShopOnContainers">eShopOnContainers project</a>: Sample project demonstrating a .NET Microservices architecture and using Polly for resilience.</li>
+<li>[Samples: Samples in this repository that serve as an introduction to Polly.</li>
+<li>[Polly-Samples: Contains practical examples for using various implementations of Polly. Please feel free to contribute to the Polly-Samples repository in order to assist others who are either learning Polly for the first time, or are seeking advanced examples and novel approaches provided by our generous community.</li>
+<li>Microsoft's [eShopOnContainers project: Sample project demonstrating a .NET Microservices architecture and using Polly for resilience.</li>
 </ul>
 </article>
 

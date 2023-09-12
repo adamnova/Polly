@@ -87,13 +87,13 @@
 
 <h2 id="about">About</h2>
 <ul>
-<li><strong>Options</strong>: <a href="../api/Polly.Hedging.HedgingStrategyOptions-1.html"><code>HedgingStrategyOptions&lt;T&gt;</code></a></li>
+<li><strong>Options</strong>: [<code>HedgingStrategyOptions&lt;T&gt;</code></li>
 <li><strong>Extensions</strong>: <code>AddHedging</code></li>
 <li><strong>Strategy Type</strong>: Reactive</li>
 </ul>
 <hr>
-<p>The hedging strategy enables the re-execution of a user-defined callback if the previous execution takes too long. This approach gives you the option to either run the original callback again or specify a new callback for subsequent hedged attempts. Implementing a hedging strategy can boost the overall responsiveness of the system. However, it's essential to note that this improvement comes at the cost of increased resource utilization. If low latency is not a critical requirement, you may find the <a href="retry.html">retry strategy</a> is more appropriate.</p>
-<p>This strategy also supports multiple <a href="#concurrency-modes">concurrency modes</a> for added flexibility.</p>
+<p>The hedging strategy enables the re-execution of a user-defined callback if the previous execution takes too long. This approach gives you the option to either run the original callback again or specify a new callback for subsequent hedged attempts. Implementing a hedging strategy can boost the overall responsiveness of the system. However, it's essential to note that this improvement comes at the cost of increased resource utilization. If low latency is not a critical requirement, you may find the [retry strategy is more appropriate.</p>
+<p>This strategy also supports multiple [concurrency modes for added flexibility.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Please do not start any background work when executing actions using the hedging strategy. This strategy can spawn multiple parallel tasks, and as a result multiple background tasks can be started.</p>
@@ -293,7 +293,7 @@ new ResiliencePipelineBuilder&lt;HttpResponseMessage&gt;()
 <!-- endSnippet -->
 <h3 id="parameterized-callbacks-and-action-generator">Parameterized callbacks and action generator</h3>
 <p>When you have control over the callbacks that the resilience pipeline receives, you can parameterize them. This flexibility allows for reusing the callbacks within an action generator.</p>
-<p>A common use case is with <a href="https://learn.microsoft.com/aspnet/web-api/overview/advanced/http-message-handlers"><code>DelegatingHandler</code></a>. Here, you can parameterize the <code>HttpRequestMessage</code>:</p>
+<p>A common use case is with [<code>DelegatingHandler</code>. Here, you can parameterize the <code>HttpRequestMessage</code>:</p>
 <!-- snippet: hedging-handler -->
 <pre><code class="lang-cs">internal class HedgingHandler : DelegatingHandler
 {
