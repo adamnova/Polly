@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Polly Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Polly Documentation ">
+      
+      <link rel="icon" href="icon.png">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/adamnova/Polly/blob/main/docs/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="polly-documentation">Polly Documentation</h1>
+
+<p>Polly is a .NET resilience and transient-fault-handling library that allows developers to express resilience strategies such as Retry, Circuit Breaker, Hedging, Timeout, Rate Limiter and Fallback in a fluent and thread-safe manner.</p>
+<p>We are a member of the <a href="https://www.dotnetfoundation.org/about">.NET Foundation</a>!</p>
+<p><img src="https://raw.github.com/App-vNext/Polly/main/Polly-Logo.png" alt="Polly logo"></p>
+<h2 id="resilience-strategies">Resilience strategies</h2>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Reactive</th>
+<th>Premise</th>
+<th style="text-align: center;">AKA</th>
+<th>How does the strategy mitigate?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="strategies/retry.html">Retry</a></td>
+<td>Yes</td>
+<td>Many faults are transient and may self-correct after a short delay.</td>
+<td style="text-align: center;"><em>Maybe it's just a blip</em></td>
+<td>Allows configuring automatic retries.</td>
+</tr>
+<tr>
+<td><a href="strategies/circuit-breaker.html">Circuit-breaker</a></td>
+<td>Yes</td>
+<td>When a system is seriously struggling, failing fast is better than making users/callers wait.  <br><br>Protecting a faulting system from overload can help it recover.</td>
+<td style="text-align: center;"><em>Stop doing it if it hurts</em> <br><br><em>Give that system a break</em></td>
+<td>Breaks the circuit (blocks executions) for a period, when faults exceed some pre-configured threshold.</td>
+</tr>
+<tr>
+<td><a href="strategies/timeout.html">Timeout</a></td>
+<td>No</td>
+<td>Beyond a certain wait, a success result is unlikely.</td>
+<td style="text-align: center;"><em>Don't wait forever</em></td>
+<td>Guarantees the caller won't have to wait beyond the timeout.</td>
+</tr>
+<tr>
+<td><a href="strategies/rate-limiter.html">Rate Limiter</a></td>
+<td>No</td>
+<td>Limiting the rate a system handles requests is another way to control load. <br><br> This can apply to the way your system accepts incoming calls, and/or to the way you call downstream services.</td>
+<td style="text-align: center;"><em>Slow down a bit, will you?</em></td>
+<td>Constrains executions to not exceed a certain rate.</td>
+</tr>
+<tr>
+<td><a href="strategies/fallback.html">Fallback</a></td>
+<td>Yes</td>
+<td>Things will still fail - plan what you will do when that happens.</td>
+<td style="text-align: center;"><em>Degrade gracefully</em></td>
+<td>Defines an alternative value to be returned (or action to be executed) on failure.</td>
+</tr>
+<tr>
+<td><a href="strategies/hedging.html">Hedging</a></td>
+<td>Yes</td>
+<td>Things can be slow sometimes, plan what you will do when that happens.</td>
+<td style="text-align: center;"><em>Hedge your bets</em></td>
+<td>Executes parallel actions when things are slow and waits for the fastest one.</td>
+</tr>
+</tbody>
+</table>
+<p>Visit the <a href="strategies/README.html">resilience strategies</a> section to understand their structure and explore various configuration methods.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>Visit the <a href="getting-started.html">getting started</a> section and learn how to quickly start using Polly.</p>
+<h2 id="articles">Articles</h2>
+<ul>
+<li><a href="README.html">Introduction</a>: General information about the project and its goals.</li>
+<li><a href="getting-started.html">Getting started</a>: A guide to help you get started with the project.</li>
+<li>Resilience strategies: A collection of strategies for improving the resilience of your system.
+<ul>
+<li><a href="strategies/timeout.html">Timeout</a>: A strategy for setting a maximum time limit for a request.</li>
+<li><a href="strategies/retry.html">Retry</a>: A strategy for retrying failed requests.</li>
+<li><a href="strategies/rate-limiter.html">Rate limiter</a>: A strategy for limiting the rate of requests.</li>
+<li><a href="strategies/hedging.html">Hedging</a>: A strategy for hedging against long request times.</li>
+<li><a href="strategies/fallback.html">Fallback</a>: A strategy for providing a fallback response in case of failure.</li>
+<li><a href="strategies/circuit-breaker.html">Circuit breaker</a>: A strategy for breaking the circuit when a system is down.</li>
+</ul>
+</li>
+<li>Resilience pipelines: Understanding the use of resilience pipelines.
+<ul>
+<li><a href="pipelines/resilience-pipeline-registry.html">Resilience pipeline registry</a>: Exploring the registry that stores resilience pipelines.</li>
+</ul>
+</li>
+<li>vanced topics: A collection of advanced topics for further learning.
+<ul>
+<li><a href="advanced/telemetry.html">Telemetry and monitoring</a>: Insights into telemetry generated by resilience pipelines and strategies.</li>
+<li><a href="advanced/simmy.html">Chaos engineering</a>: Get to know chaos engineering via the project's capabilities.</li>
+<li><a href="advanced/dependency-injection.html">Dependency injection</a>: How the project integrates with Dependency Injection.</li>
+</ul>
+</li>
+<li>Community and resources: A collection of resources and community contributions.
+<ul>
+<li><a href="community/polly-contrib.html">Polly-Contrib projects and libraries</a>: Learn how to contribute to and extend the project ecosystem.</li>
+<li><a href="community/libraries-and-contributions.html">Libraries and contributions</a>: Find out which libraries the project depends on and who contributes to its development.</li>
+<li><a href="community/resources.html">Useful resources and links</a>: Browse through blogs, podcasts, courses, e-books, and other community resources.</li>
+</ul>
+</li>
+<li><a href="api/README.md">API</a>: The API documentation for the project.</li>
+</ul>
+<h2 id="articles-previous-polly-versions">Articles (previous Polly versions)</h2>
+<ul>
+<li><a href="v7/extensibility.html">Extensibility (v7)</a>: Learn how you can extend Polly with new policies.</li>
+</ul>
+<h2 id="samples">Samples</h2>
+<ul>
+<li><a href="https://github.com/App-vNext/Polly/tree/main/samples">Samples</a>: Samples in this repository that serve as an introduction to Polly.</li>
+<li><a href="https://github.com/App-vNext/Polly-Samples">Polly-Samples</a>: Contains practical examples for using various implementations of Polly. Please feel free to contribute to the Polly-Samples repository in order to assist others who are either learning Polly for the first time, or are seeking advanced examples and novel approaches provided by our generous community.</li>
+<li>Microsoft's <a href="https://github.com/dotnet-architecture/eShopOnContainers">eShopOnContainers project</a>: Sample project demonstrating a .NET Microservices architecture and using Polly for resilience.</li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/adamnova/Polly/blob/main/docs/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
