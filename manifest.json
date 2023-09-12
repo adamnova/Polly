@@ -4,6 +4,19 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "advanced/dependency-injection.md",
       "output": {
@@ -1070,6 +1083,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "getting-started.md",
       "output": {
@@ -1101,10 +1117,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "pipelines/readme.md",
+      "source_relative_path": "pipelines/README.md",
       "output": {
         ".html": {
-          "relative_path": "pipelines/readme.html"
+          "relative_path": "pipelines/README.html"
         }
       },
       "version": ""
@@ -1120,14 +1136,11 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
-      "source_relative_path": "readme.md",
+      "source_relative_path": "strategies/README.md",
       "output": {
         ".html": {
-          "relative_path": "readme.html"
+          "relative_path": "strategies/README.html"
         }
       },
       "version": ""
@@ -1185,16 +1198,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "strategies/readme.md",
-      "output": {
-        ".html": {
-          "relative_path": "strategies/readme.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -1221,6 +1224,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
