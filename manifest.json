@@ -5,8 +5,8 @@
   "files": [
     {
       "log_codes": [
-        "InvalidFileLink",
-        "invalid-note-section"
+        "invalid-note-section",
+        "InvalidFileLink"
       ],
       "type": "Conceptual",
       "source_relative_path": "advanced/dependency-injection.md",
