@@ -89,8 +89,8 @@
 <ul>
 <li><strong>Options</strong>:
 <ul>
-<li>[<code>CircuitBreakerStrategyOptions</code></li>
-<li>[<code>CircuitBreakerStrategyOptions&lt;T&gt;</code></li>
+<li><a href="../api/Polly.CircuitBreaker.CircuitBreakerStrategyOptions.html"><code>CircuitBreakerStrategyOptions</code></a></li>
+<li><a href="../api/Polly.CircuitBreaker.CircuitBreakerStrategyOptions-1.html"><code>CircuitBreakerStrategyOptions&lt;T&gt;</code></a></li>
 </ul>
 </li>
 <li><strong>Extensions</strong>: <code>AddCircuitBreaker</code></li>
@@ -105,11 +105,11 @@
 <hr>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Version 8 documentation for this strategy has not yet been migrated. For more information on circuit breaker concepts and behavior, refer to the [older documentation.</p>
+<p>Version 8 documentation for this strategy has not yet been migrated. For more information on circuit breaker concepts and behavior, refer to the <a href="https://github.com/App-vNext/Polly/wiki/Circuit-Breaker">older documentation</a>.</p>
 </div>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Be aware that the Circuit Breaker strategy [rethrows all exceptions, including those that are handled. A Circuit Breaker's role is to monitor faults and break the circuit when a certain threshold is reached; it does not manage retries. Combine the Circuit Breaker with a Retry strategy if needed.</p>
+<p>Be aware that the Circuit Breaker strategy <a href="https://github.com/App-vNext/Polly/wiki/Circuit-Breaker#exception-handling">rethrows all exceptions</a>, including those that are handled. A Circuit Breaker's role is to monitor faults and break the circuit when a certain threshold is reached; it does not manage retries. Combine the Circuit Breaker with a Retry strategy if needed.</p>
 </div>
 <h2 id="usage">Usage</h2>
 <!-- snippet: circuit-breaker -->
@@ -231,10 +231,10 @@ await manualControl.CloseAsync();
 </table>
 <h2 id="resources">Resources</h2>
 <ul>
-<li>[Making the Netflix API More Resilient</li>
-<li>[Circuit Breaker by Martin Fowler</li>
-<li>[Circuit Breaker Pattern by Microsoft</li>
-<li>[Original Circuit Breaking Article</li>
+<li><a href="https://techblog.netflix.com/2011/12/making-netflix-api-more-resilient.html">Making the Netflix API More Resilient</a></li>
+<li><a href="https://martinfowler.com/bliki/CircuitBreaker.html">Circuit Breaker by Martin Fowler</a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/dn589784.aspx">Circuit Breaker Pattern by Microsoft</a></li>
+<li><a href="https://web.archive.org/web/20160106203951/http://thatextramile.be/blog/2008/05/the-circuit-breaker">Original Circuit Breaking Article</a></li>
 </ul>
 </article>
 

@@ -85,8 +85,8 @@
         <article data-uid="">
 <h1 id="getting-started">Getting started</h1>
 
-<p>To use Polly, you must provide a callback and execute it using [<strong>resilience pipeline</strong>. A resilience pipeline is a combination of one or more [<strong>resilience strategies</strong> such as retry, timeout, and rate limiter. Polly uses <strong>builders</strong> to integrate these strategies into a pipeline.</p>
-<p>To get started, first add the [Polly.Core package to your project by running the following command:</p>
+<p>To use Polly, you must provide a callback and execute it using <a href="pipelines/readme.html"><strong>resilience pipeline</strong></a>. A resilience pipeline is a combination of one or more <a href="strategies/readme.html"><strong>resilience strategies</strong></a> such as retry, timeout, and rate limiter. Polly uses <strong>builders</strong> to integrate these strategies into a pipeline.</p>
+<p>To get started, first add the <a href="https://www.nuget.org/packages/Polly.Core/">Polly.Core</a> package to your project by running the following command:</p>
 <pre><code class="lang-sh">dotnet add package Polly.Core
 </code></pre>
 <p>You can create a <code>ResiliencePipeline</code> using the <code>ResiliencePipelineBuilder</code> class as shown below:</p>
@@ -111,7 +111,7 @@ await pipeline.ExecuteAsync(async token =&gt;
 </code></pre>
 <!-- endSnippet -->
 <h2 id="dependency-injection">Dependency injection</h2>
-<p>If you prefer to define resilience pipelines using [<code>IServiceCollection</code>, you'll need to install the [Polly.Extensions package:</p>
+<p>If you prefer to define resilience pipelines using <a href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection"><code>IServiceCollection</code></a>, you'll need to install the <a href="https://www.nuget.org/packages/Polly.Extensions/">Polly.Extensions</a> package:</p>
 <pre><code class="lang-sh">dotnet add package Polly.Extensions
 </code></pre>
 <p>You can then define your resilience pipeline using the <code>AddResiliencePipeline(...)</code> extension method as shown:</p>

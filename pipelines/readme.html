@@ -145,8 +145,8 @@ ResilienceContextPool.Shared.Return(context);
 <!-- endSnippet -->
 <p>The above samples demonstrate how to use the resilience pipeline within the same scope. Additionally, consider the following:</p>
 <ul>
-<li>Separate the resilience pipeline's definition from its usage. Inject pipelines into the code that will consume them. This [facilitates various unit-testing scenarios.</li>
-<li>If your application uses Polly in multiple locations, define all pipelines at startup using [<code>ResiliencePipelineRegistry</code> or using the <code>AddResiliencePipeline</code> extension. This is a common approach in .NET Core applications. For example, you could create your own extension method on <code>IServiceCollection</code> to configure pipelines consumed elsewhere in your application.</li>
+<li>Separate the resilience pipeline's definition from its usage. Inject pipelines into the code that will consume them. This <a href="https://github.com/App-vNext/Polly/wiki/Unit-testing-with-Polly---with-examples">facilitates various unit-testing scenarios</a>.</li>
+<li>If your application uses Polly in multiple locations, define all pipelines at startup using <a href="/docs/resilience-pipeline-registry.md"><code>ResiliencePipelineRegistry</code></a> or using the <code>AddResiliencePipeline</code> extension. This is a common approach in .NET Core applications. For example, you could create your own extension method on <code>IServiceCollection</code> to configure pipelines consumed elsewhere in your application.</li>
 </ul>
 <!-- snippet: resilience-pipeline-di-usage -->
 <pre><code class="lang-cs">public static void ConfigureMyPipelines(IServiceCollection services)
